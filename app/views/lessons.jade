@@ -1,0 +1,67 @@
+extends layout
+block content
+    section
+        .text-center(style='background: #FFFFFF url(/img/right_curtain.png); background-repeat:no-repeat')
+            .container-fluid
+                .row-fluid
+                    .col-lg-3
+                        img.pull-left(src='/img/logo.png', width='413', height='181', alt='Logo')
+                    .col-md-4.col-md-offset-5
+                        ul.nav-stacked.nav-pills.nav.well
+                            li(role='presentation')
+                                a(href='/index') Главная
+                            li(role='presentation')
+                                a(href='/contacts') Контакты
+                            li(role='presentation')
+                                a(href='/jobs') Вакансии
+                            li(role='presentation')
+                                a(href='/services') Услуги
+                            li(role='presentation')
+                                a(href='/portfolio') Портфолио
+                            li(role='presentation')
+                                a(href='/about') Отзывы
+                            li.active(role='presentation')
+                                a(href='#') Уроки
+            .container-fluid
+                .row-fluid
+                    .col-lg-3 !{banner}
+                    .col-lg-6
+                        .well
+                            h1 Spice Developers
+                            h2 Ниже приведены примеры наших уроков по HTML и CGI, Ruby:
+                            ul
+                                li
+                                    a(href='/lesson1') Урок 0. Вводное занятие
+            .container-fluid.margin-top-20
+                .row-fluid
+                    .row
+                        img.img-responsive(src='/img/bottom.png', alt='Placeholder image')
+                .row.margin-top-40
+                    .col-lg-6.col-lg-offset-3
+                        h2
+                            p Остались вопросы?
+                            p Свяжитесь с нами
+                        form(role='form', action='MAILTO:spicecoders@gmail.com', method='post', enctype='text/plain')
+                            .col-lg-12
+                                .alert-info
+                                    span.glyphicon.glyphicon-ok
+                                    |  - Обязательные поля
+                                .form-group
+                                    label(for='InputName') Как Вас зовут
+                                    .input-group
+                                        input#InputName.form-control(type='text', name='InputName', placeholder='', required='')
+                                        span.input-group-addon
+                                            i.glyphicon.glyphicon-ok.form-control-feedback
+                                .form-group
+                                    label(for='InputEmail') Ваш Email
+                                    .input-group
+                                        input#InputEmail.form-control(type='email', name='InputEmail', placeholder='Email', required='')
+                                        span.input-group-addon
+                                            i.glyphicon.glyphicon-ok.form-control-feedback
+                                .form-group
+                                    label(for='InputMessage') Сообщение
+                                    .input-group
+                                        textarea#InputMessage.form-control(name='InputMessage', rows='5', required='')
+                                        span.input-group-addon
+                                            i.glyphicon.glyphicon-ok.form-control-feedback
+                                input#submit.btn.btn-info(type='submit', name='submit', value='Отправить')
