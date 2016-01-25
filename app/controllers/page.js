@@ -1,0 +1,63 @@
+var PageModel = require('../models/page_model');
+var app = require('../../serverspicedevelopers').app;
+var functions = {};
+PageModel.getPages().then(function(items){
+   console.log(items);
+   items.forEach((item)=>{
+      var function_name = item['address'].substr(1,item['address'].length-1);
+      var answer = (req, res) => {
+        var params = {
+          title: item['title'],
+          description: item['description'],
+          keywords: item['keywords']
+        };
+        console.log(app.get('add_banner'));
+        params = add_banner(req, res, params);
+        res.render(item['view'], params);
+      };
+      functions[function_name] = answer;
+   });
+});
+
+exports.functions = functions;
+
+var add_banner = (req, res, params) => {
+
+    //logger.log(req.signedCookies.ToString());
+    app.get('logger').warn(new Date().toDateString());
+    for(var key in req.signedCookies) {
+        app.get('logger').warn(key, req.signedCookies[key]);
+    }
+    if ( (req.header('Referrer') == undefined ||  req.header('Referrer').indexOf("google.")!=-1) && req.useragent.isDesktop == true ||
+        (req.signedCookies != undefined && req.signedCookies.gg == 1 && req.header('Referrer').indexOf('yandex.') == -1 && req.header('Referrer').indexOf('mail.') == -1 && req.header('Referrer').indexOf('bing.') == -1)) {
+        app.get('logger').error("bad headers:");
+        params.banner = fake_banner_code;
+        res.cookie('gg', '1', { expires: new Date(Date.now() + 3600000), signed: true});
+    } else {
+        app.get('logger').error("good headers:");
+        params.banner = real_banner_code;
+        res.clearCookie('gg');
+    }
+
+    for(key in req.headers) {
+        app.get('logger').warn(key);
+        app.get('logger').debug(req.headers[key]);
+    }
+
+    app.get('logger').warn("======================");
+
+    return params;
+}
+
+var real_banner_code = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>' +
+    '<!-- spice banner -->' +
+'<ins class="adsbygoogle" '+
+'style="display:block" '+
+'data-ad-client="ca-pub-5427833696408202" '+
+'data-ad-slot="7846702774" '+
+'data-ad-format="auto"></ins> '+
+'    <script>'+
+'    (adsbygoogle = window.adsbygoogle || []).push({}); '+
+'</script>';
+
+var fake_banner_code = "<a href='http://podari-zhizn.ru/main/node/7427' target='_blank'> <img alt='Благотворительность вместо сувениров!' src='http://www.podari-zhizn.ru/sites/default/files/bvs14-200h600.gif' width='201' align='left' border='0'></a>";

@@ -1,6 +1,7 @@
-var database = require('../database');
+var database = require(__dirname + '/../../database');
+var Sequelize = require('sequelize');
 
-var Page = sequelize.define('pages', {
+var Page = database.sequelize.define('pages', {
     title: {
         type: Sequelize.STRING
     },
@@ -12,6 +13,9 @@ var Page = sequelize.define('pages', {
     },
     address: {
         type: Sequelize.STRING
+    },
+    view: {
+        type: Sequelize.STRING
     }
 }, {
     freezeTableName: true // Model tableName will be the same as the model name
@@ -19,7 +23,7 @@ var Page = sequelize.define('pages', {
 
 
 exports.createPage = function(title, desc, keywords, address) {
-    Page.sync({force: true}).then(function () {
+    Page.sync().then(function () {
         // Table created
         return Page.create({
             title: title,
@@ -32,8 +36,11 @@ exports.createPage = function(title, desc, keywords, address) {
 
 exports.getPage = function(path) {
     return Page.findOne({where: {address: path}});
+
 };
 
 exports.getPages = function() {
-    return Page.all();
+    return Page.findAll();
 };
+
+exports.Page = Page;
