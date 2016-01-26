@@ -8,10 +8,7 @@ var Visitor = database.sequelize.define('visitors', {
 
 var Visit = database.sequelize.define('visits', {
   ip: {
-      type: Sequelize.STRING,
-      validate: {
-          isIPv4: true
-      }
+      type: Sequelize.STRING
   },
   useragent: {
       type: Sequelize.STRING
@@ -28,5 +25,6 @@ var Visit = database.sequelize.define('visits', {
 });
 
 exports.makeVisit = (ip, ua, address, referrer, good_header) => {
-  Visit.create({ip: ip, useragent: ua, referrer: referrer, address: address, good_headers: good_header})
+  console.log(ip);
+  Visit.sync().then(()=>{Visit.create({ip: ip, useragent: ua.browser +" "+ua.os+" "+ua.isDesktop, referrer: referrer, address: address, good_headers: good_header})});
 };

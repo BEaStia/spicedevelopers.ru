@@ -88,9 +88,16 @@ describe('PageController', ()=> {
 
   describe('#getPages', ()=>{
     it('should add all pages', (done)=>{
-      pageModel.Page.bulkCreate([
+      var pages = [
        {
-         address: "/(index(\.html)?)?",
+         address: "/",
+         title: 'Главная Spice developers',
+         description: "Главная страница Spice Developers разработчиков на Ruby, JS, C#",
+         keywords: "ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг",
+         view: 'main',
+       },
+       {
+         address: "/index(\.html)?",
          title: 'Главная Spice developers',
          description: "Главная страница Spice Developers разработчиков на Ruby, JS, C#",
          keywords: "ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг",
@@ -145,9 +152,10 @@ describe('PageController', ()=> {
          description: 'Вводной урок в интернет-технологии',
          keywords: 'ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг, уроки'
        }
-     ]).then(()=>{
-      pageModel.Page.all().then((pages)=>{
-        pages.length.should.equal(8);
+     ];
+      pageModel.Page.bulkCreate(pages).then(()=>{
+      pageModel.Page.all().then((page_list)=>{
+        page_list.length.should.equal(pages.length);
         done();
       })
    });

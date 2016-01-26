@@ -1,10 +1,9 @@
 var PageModel = require('../models/page_model');
 var VisitorModel = require('../models/visitor');
 
-var app = require('../../serverspicedevelopers').app;
+var app = require('../../server').app;
 var functions = {};
 PageModel.getPages().then(function(items){
-   console.log(items);
    items.forEach((item)=>{
       var function_name = item['address'].substr(1,item['address'].length-1);
       var answer = (req, res) => {
@@ -13,7 +12,6 @@ PageModel.getPages().then(function(items){
           description: item['description'],
           keywords: item['keywords']
         };
-        console.log(app.get('add_banner'));
         params = add_banner(req, res, params);
         res.render(item['view'], params);
       };
@@ -26,9 +24,6 @@ exports.functions = functions;
 var add_banner = (req, res, params) => {
 
     var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-
-    console.log(req.useragent);
-
 
     if ( (req.header('Referrer') == undefined ||  req.header('Referrer').indexOf("google.")!=-1) && req.useragent.isDesktop == true ||
         (req.signedCookies != undefined && req.signedCookies.gg == 1
