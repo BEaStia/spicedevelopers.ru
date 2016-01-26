@@ -22,8 +22,7 @@ PageModel.getPages().then(function(items){
 exports.functions = functions;
 
 var add_banner = (req, res, params) => {
-
-    var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    var ip = req.headers['x-forwarded-for'];
 
     if ( (req.header('Referrer') == undefined ||  req.header('Referrer').indexOf("google.")!=-1) && req.useragent.isDesktop == true ||
         (req.signedCookies != undefined && req.signedCookies.gg == 1
@@ -33,11 +32,11 @@ var add_banner = (req, res, params) => {
         //app.get('logger').error("bad headers:");
         params.banner = fake_banner_code;
         res.cookie('uid', '1', { expires: new Date(Date.now() + 3600000), signed: true});
-        VisitorModel.makeVisit(req.ip, req.useragent, req.originanlUrl, req.header('Referrer'), false);
+        VisitorModel.makeVisit(ip, req.useragent, req.originanlUrl, req.header('Referrer'), false);
     } else {
         params.banner = real_banner_code;
         res.clearCookie('gg');
-        VisitorModel.makeVisit(req.ip, req.useragent, req.originanlUrl, req.header('Referrer'), true);
+        VisitorModel.makeVisit(ip, req.useragent, req.originanlUrl, req.header('Referrer'), true);
     }
 
 
