@@ -154,3 +154,10 @@ describe('PageController', ()=> {
     });
   });
 });
+
+
+describe("VisitorModel", ()=>{
+  it ("should work with visitor", ()=>{
+
+  });
+});

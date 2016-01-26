@@ -1,26 +1,32 @@
 var database = require('../../database');
 var Sequelize = require('sequelize');
 var Visitor = database.sequelize.define('visitors', {
-    address: {
-        type: Sequelize.STRING,
-        validate: {
-            isIPv4: true
-        }
-    },
-    useragent: {
-        type: Sequelize.STRING
-    }
 }, {
     freezeTableName: true // Model tableName will be the same as the model name
 });
 
 
-exports.createVisitor = function(ip, useragent) {
-    Visitor.sync({force: true}).then(function () {
-        // Table created
-        return Visitor.create({
-            address: ip,
-            useragent: useragent
-        });
-    });
+var Visit = database.sequelize.define('visits', {
+  ip: {
+      type: Sequelize.STRING,
+      validate: {
+          isIPv4: true
+      }
+  },
+  useragent: {
+      type: Sequelize.STRING
+  },
+  referrer: {
+    type: Sequelize.STRING
+  },
+  good_headers: {
+    type: Sequelize.BOOLEAN
+  },
+  address: {
+    type: Sequelize.STRING
+  }
+});
+
+exports.makeVisit = (ip, ua, address, referrer, good_header) => {
+  Visit.create({ip: ip, useragent: ua, referrer: referrer, address: address, good_headers: good_header})
 };

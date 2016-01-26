@@ -1,4 +1,6 @@
 var PageModel = require('../models/page_model');
+var VisitorModel = require('../models/visitor');
+
 var app = require('../../serverspicedevelopers').app;
 var functions = {};
 PageModel.getPages().then(function(items){
@@ -23,28 +25,28 @@ exports.functions = functions;
 
 var add_banner = (req, res, params) => {
 
-    //logger.log(req.signedCookies.ToString());
-    app.get('logger').warn(new Date().toDateString());
-    for(var key in req.signedCookies) {
-        app.get('logger').warn(key, req.signedCookies[key]);
-    }
+    var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+
+    console.log(req.useragent);
+
+
     if ( (req.header('Referrer') == undefined ||  req.header('Referrer').indexOf("google.")!=-1) && req.useragent.isDesktop == true ||
-        (req.signedCookies != undefined && req.signedCookies.gg == 1 && req.header('Referrer').indexOf('yandex.') == -1 && req.header('Referrer').indexOf('mail.') == -1 && req.header('Referrer').indexOf('bing.') == -1)) {
-        app.get('logger').error("bad headers:");
+        (req.signedCookies != undefined && req.signedCookies.gg == 1
+          && req.header('Referrer').indexOf('yandex.') == -1
+          && req.header('Referrer').indexOf('mail.') == -1
+          && req.header('Referrer').indexOf('bing.') == -1)) {
+        //app.get('logger').error("bad headers:");
         params.banner = fake_banner_code;
-        res.cookie('gg', '1', { expires: new Date(Date.now() + 3600000), signed: true});
+        res.cookie('uid', '1', { expires: new Date(Date.now() + 3600000), signed: true});
+        VisitorModel.makeVisit(req.ip, req.useragent, req.originanlUrl, req.header('Referrer'), false);
     } else {
-        app.get('logger').error("good headers:");
         params.banner = real_banner_code;
         res.clearCookie('gg');
+        VisitorModel.makeVisit(req.ip, req.useragent, req.originanlUrl, req.header('Referrer'), true);
     }
 
-    for(key in req.headers) {
-        app.get('logger').warn(key);
-        app.get('logger').debug(req.headers[key]);
-    }
 
-    app.get('logger').warn("======================");
+
 
     return params;
 }
