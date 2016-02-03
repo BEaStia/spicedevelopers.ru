@@ -1,0 +1,85 @@
+extends layout
+block domain
+        .about
+            .container
+                h1.m_1
+                    | Search the best domain
+                    form.search-form.domain-search
+                        .three-fifth.column.first
+                            input.text(type='text', value='Looking for Domains ?', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Looking for Domains ?';}")
+                        .one-fifth.column
+                            span.selection-box
+                                select.domains.valid(name='domains')
+                                    option .com (From $3 / Year)
+                                    option .info (From $3 / Year)
+                                    option .net (From $3 / Year)
+                                    option .org (From $3 / Year)
+                        .one-fifth.column
+                            input(type='submit', value='Send Now')
+                        .clearfix
+                    .new_domain
+                        h2 New Domains
+                        .col-md-6
+                            ul.list_3
+                                li
+                                    span .nyc
+                                    a.dt-sc-button.small(href='#', target='_blank') Register
+                                li
+                                    span .vegas
+                                    a.dt-sc-button.small(href='#', target='_blank') Register
+                                li
+                                    span .website
+                                    a.dt-sc-button.small(href='#', target='_blank') Register
+                                li
+                                    span .app
+                                    a.dt-sc-button.small(href='#', target='_blank') Register
+                                li
+                                    span .ask
+                                    a.dt-sc-button.small(href='#', target='_blank') Register
+                        .col-md-6
+                            ul.list_3
+                                li
+                                    span .lip
+                                    a.dt-sc-button.small(href='#', target='_blank') Register
+                                li
+                                    span .wiki
+                                    a.dt-sc-button.small(href='#', target='_blank') Register
+                                li
+                                    span .do
+                                    a.dt-sc-button.small(href='#', target='_blank') Register
+                                li
+                                    span .go
+                                    a.dt-sc-button.small(href='#', target='_blank') Register
+                                li
+                                    span .zipo
+                                    a.dt-sc-button.small(href='#', target='_blank') Register
+                        .clearfix
+        .contact_index
+            .container
+                .col-md-8.contact_index-left
+                    h3 Send Us A Message
+                    .contact-form
+                        form
+                            input.textbox(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}")
+                            textarea(value='Message:', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Message';}") Message
+                            input(type='submit', value='Send Now')
+                .col-md-4.contact_index-right
+                    h3 Quick Links
+                    ul.footer_social
+                        li
+                            a(href='#')
+                                i.email
+                        li
+                            a(href='#')
+                                i.chat
+                        li
+                            a(href='#')
+                                i.report
+                        li
+                            a(href='#')
+                                i.phone
+        .footer
+            .container
+                p
+                    | Template by
+                    a(href='http://w3layouts.com/') W3layouts

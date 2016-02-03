@@ -1,0 +1,163 @@
+extends layout
+block content
+        .about
+            .container
+                h1.m_2 3 Columns
+                .plans-view
+                    .col-md-4
+                        .pricing-table-grid
+                            .plans_head
+                                h3 Personal
+                                h4.m_4
+                                    small.m_2 $
+                                    | 10
+                                    small.m_3(small='') /mo
+                                p Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                            ul
+                                li
+                                    a(href='#') 20GB Disk Space
+                                li
+                                    a(href='#') 20GB Monthly Bandwidth
+                                li
+                                    a(href='#') Unlimited Users
+                                li
+                                    a(href='#') 100 Domains
+                                li
+                                    a(href='#') 430 Email Accounts
+                                li
+                                    a(href='#') Automatic Cloud Backups
+                            a.popup-with-zoom-anim.button(href='#small-dialog') Order Now
+                            #small-dialog.mfp-hide
+                                .pop_up
+                                    .payment-online-form-left
+                                        form
+                                            h4
+                                                span.shipping
+                                                | Shipping
+                                            ul
+                                                li
+                                                    input.text-box-dark(type='text', value='Frist Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Frist Name';}")
+                                                li
+                                                    input.text-box-dark(type='text', value='Last Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Last Name';}")
+                                            ul
+                                                li
+                                                    input.text-box-dark(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}")
+                                                li
+                                                    input.text-box-dark(type='text', value='Company Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Company Name';}")
+                                            ul
+                                                li
+                                                    input.text-box-dark(type='text', value='Phone', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Phone';}")
+                                                li
+                                                    input.text-box-dark(type='text', value='Address', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Address';}")
+                                                .clearfix
+                                            .clear
+                                            ul.payment-type
+                                                h4
+                                                    span.payment
+                                                    |  Payments
+                                                li
+                                                    span.col_checkbox
+                                                        input#3.css-checkbox1(type='checkbox')
+                                                        label.css-label1(for='3', name='demo_lbl_1')
+                                                        a.visa(href='#')
+                                                li
+                                                    span.col_checkbox
+                                                        input#4.css-checkbox2(type='checkbox')
+                                                        label.css-label2(for='4', name='demo_lbl_2')
+                                                        a.paypal(href='#')
+                                                .clearfix
+                                            ul
+                                                li
+                                                    input.text-box-dark(type='text', value='Card Number', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Card Number';}")
+                                                li
+                                                    input.text-box-dark(type='text', value='Name on card', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Name on card';}")
+                                                .clearfix
+                                            ul
+                                                li
+                                                    input#datepicker.text-box-light.hasDatepicker(type='text', value='Expiration Date', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Expiration Date';}")
+                                                    em.pay-date
+                                                li
+                                                    input.text-box-dark(type='text', value='Security Code', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Security Code';}")
+                                                .clearfix
+                                            ul.payment-sendbtns
+                                                li
+                                                    input(type='reset', value='Cancel')
+                                                li
+                                                    input(type='submit', value='Process order')
+                                            .clearfix
+                    .col-md-4
+                        .pricing-table-grid
+                            .plans_head1
+                                h3 Professional
+                                h4.m_4
+                                    small.m_2 $
+                                    | 24
+                                    small.m_3(small='') /mo
+                                p Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                            ul
+                                li
+                                    a(href='#') 20GB Disk Space
+                                li
+                                    a(href='#') 20GB Monthly Bandwidth
+                                li
+                                    a(href='#') Unlimited Users
+                                li
+                                    a(href='#') 100 Domains
+                                li
+                                    a(href='#') 430 Email Accounts
+                                li
+                                    a(href='#') Automatic Cloud Backups
+                            a.popup-with-zoom-anim.button1(href='#small-dialog') Order Now
+                    .col-md-4
+                        .pricing-table-grid
+                            .plans_head
+                                h3 Business
+                                h4.m_4
+                                    small.m_2 $
+                                    | 99
+                                    small.m_3(small='') /mo
+                                p Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                            ul
+                                li
+                                    a(href='#') 20GB Disk Space
+                                li
+                                    a(href='#') 20GB Monthly Bandwidth
+                                li
+                                    a(href='#') Unlimited Users
+                                li
+                                    a(href='#') 100 Domains
+                                li
+                                    a(href='#') 430 Email Accounts
+                                li
+                                    a(href='#') Automatic Cloud Backups
+                            a.popup-with-zoom-anim.button(href='#small-dialog') Order Now
+                    .clearfix
+        .contact_index
+            .container
+                .col-md-8.contact_index-left
+                    h3 Send Us A Message
+                    .contact-form
+                        form
+                            input.textbox(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}")
+                            textarea(value='Message:', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Message';}") Message
+                            input(type='submit', value='Send Now')
+                .col-md-4.contact_index-right
+                    h3 Quick Links
+                    ul.footer_social
+                        li
+                            a(href='#')
+                                i.email
+                        li
+                            a(href='#')
+                                i.chat
+                        li
+                            a(href='#')
+                                i.report
+                        li
+                            a(href='#')
+                                i.phone
+        .footer
+            .container
+                p
+                    | Template by
+                    a(href='http://w3layouts.com/') W3layouts

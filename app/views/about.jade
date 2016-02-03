@@ -1,85 +1,81 @@
 extends layout
-
 block content
-    section
-        .text-center(style='background: #FFFFFF url(/img/right_curtain.png); background-repeat:no-repeat')
-            .container-fluid
-                .row-fluid
-                    .col-lg-3
-                        img.pull-left(src='/img/logo.png', width='413', height='181', alt='Logo')
-                    .col-md-4.col-md-offset-5
-                        ul.nav-stacked.nav-pills.nav.well
-                            li(role='presentation')
-                                a(href='/index') Главная
-                            li(role='presentation')
-                                a(href='/contacts') Контакты
-                            li(role='presentation')
-                                a(href='/jobs') Вакансии
-                            li(role='presentation')
-                                a(href='/services') Услуги
-                            li(role='presentation')
-                                a(href='/portfolio') Портфолио
-                            li.active(role='presentation')
-                                a(href='#') Отзывы
-                            li(role='presentation')
-                                a(href='/lessons') Уроки
-            .container-fluid
-                .row-fluid
-                    .col-lg-3 !{banner}
-                    .col-lg-6
-                        .well
-                            h3 Отзывы о нашей работе
-                            div
-                                .well.container-fluid
-                                    .row-fluid
-                                        .col-lg-4
-                                            a#galiya.btn(href='#', data-container='body', role='button', data-toggle='popover', data-placement='left', data-content='Помогли в самых тяжелый момент, за двое суток сделали диплом! Больше уже никто не брался! Все отлично сдала, защитилась!')
-                                                img.img-rounded.img-responsive(width='200px', src='http://cs9737.vk.me/u6646558/142092047/x_9ca1799f.jpg')
-                                    .row-fluid
-                                        .col-lg-4
-                                            a#vitalik.btn(href='#', data-container='body', role='button', data-toggle='popover', data-placement='bottom', data-content='Три месяца не мог сделать одну программу, нужна была консультация. Всего один вечер - и они все сделали!')
-                                                img.img-rounded.img-responsive(width='200', height='200', src='http://cs618317.vk.me/v618317900/150e8/P1rb0tF4d6k.jpg')
-                                    .row-fluid
-                                        .col-lg-4
-                                            a#dima.btn(href='#', data-container='body', role='button', data-toggle='popover', data-placement='right', data-content='За неделю сделали сложный проект в авральном режиме! Очень выручили!')
-                                                img.img-rounded.img-responsive(width='200', height='200', src='http://cs11099.vk.me/v11099979/47d/AbnhXmne6OQ.jpg')
+        .about
+            .container
+                .col-md-8.grid_2
+                    h1 Довольные клиенты на протяжении 3х лет
+                    .box-4.box-5
+                        .put-left
+                            img.img-responsive(src='images/pic1.jpg', alt='')
+                        .caption
+                            h3
+                                a(href='#') Десятки людей доверяют нам самое ценное
+                            p
+                              .alert
+                                | Гарантами нашей надежности являются лояльные клиенты и специалисты высокого класса. Высочайшее качество сервиса - это то, что трудно передать словами, но легко почувствовать
+                        .clearfix
+                    .box-4
+                        .put-left
+                            img.img-responsive(src='images/pic2.jpg', alt='')
+                        .caption
+                            h3
+                                a(href='#') Трудности делают нас сильнее
+                            p
+                              .alert
+                                | Работа с высокими нагрузками - это деятельность, при которой невозможно избежать проблем технического характера. Тем не менее, мы с гордостью заявляем, что накопленный опыт позволяет нам решать любые проблемы с оперативностью, которая Вас приятно удивит
+                        .clearfix
+                .col-md-4.grid_3
+                    h2 Что Вы получаете
+                    ul.list_1
+                        li
+                            .index-box
+                                .data-index 1.
+                                .caption
+                                    h3
+                                        a(href='#') Оптимальное решение
+                                    .small
+                                        | Наш хостинг - одно из лучших предложений на рынке
 
-            .container-fluid(style='margin-top: 20px')
-                .row-fluid
-                    .row
-                        img.img-responsive(src='/img/bottom.png', alt='Placeholder image')
-                .row(style='margin-top:40px')
-                    .col-lg-6.col-lg-offset-3
-                        h2
-                            p Остались вопросы?
-                            p Свяжитесь с нами
-                        form(role='form', action='MAILTO:spicecoders@gmail.com', method='post', enctype='text/plain')
-                            .col-lg-12
-                                .alert-info
-                                    span.glyphicon.glyphicon-ok
-                                    |  - Обязательные поля
-                                .form-group
-                                    label(for='InputName') Как Вас зовут
-                                    .input-group
-                                        input#InputName.form-control(type='text', name='InputName', placeholder='', required='')
-                                        span.input-group-addon
-                                            i.glyphicon.glyphicon-ok.form-control-feedback
-                                .form-group
-                                    label(for='InputEmail') Ваш Email
-                                    .input-group
-                                        input#InputEmail.form-control(type='email', name='InputEmail', placeholder='Email', required='')
-                                        span.input-group-addon
-                                            i.glyphicon.glyphicon-ok.form-control-feedback
-                                .form-group
-                                    label(for='InputMessage') Сообщение
-                                    .input-group
-                                        textarea#InputMessage.form-control(name='InputMessage', rows='5', required='')
-                                        span.input-group-addon
-                                            i.glyphicon.glyphicon-ok.form-control-feedback
-                                input#submit.btn.btn-info(type='submit', name='submit', value='Отправить')
-
-block after
-    script.
-        $($("#galiya").popover());
-        $($("#vitalik").popover());
-        $($("#dima").popover());
+                        li
+                            .index-box
+                                .data-index 2.
+                                .caption
+                                    h3
+                                        a(href='#') Приятные бонусы
+                                    .small
+                                        | Мы любим дарить подарки как новым, так и подписанным клиентам
+                        li
+                            .index-box
+                                .data-index 3.
+                                .caption
+                                    h3
+                                        a(href='#') Бесплатная техподдержка
+                                    .small
+                                        | Вне зависимости от вашего тарифного плана, наши специалисты всегда будут рады помочь
+                        .clearfix
+        .content_bottom
+            .container
+                h2 Как мы обеспечиваем непревзойденное качество?
+                .col-md-4.grid_4
+                    img.img-responsive(src='images/pic3.jpg', alt='')
+                    h3
+                        a(href='#') Профилактика
+                    p
+                        | Перефразируя великого Сунь-Цзы, самое лучшее решение проблемы - это её предотвращение. Наше оборудование постоянно проходит профилактические проверки как в автоматическом, так и в ручном режиме
+                .col-md-4.grid_4
+                    img.img-responsive(src='images/pic4.jpg', alt='')
+                    h3
+                        a(href='#') Ответственность
+                    p
+                        | Эффективный менеджмент и устоявшаяся организационная - это то, что лежит в основе нашего успеха. Также нам важно мнение наших клиентов
+                .col-md-4.grid_4
+                    img.img-responsive(src='images/pic5.jpg', alt='')
+                    h3
+                        a(href='#') Мониторинг
+                    p
+                        | Днем и ночью наши специалисты отслеживают метрики качества работы оборудования, находясь на страже ваших интересов
+        .footer
+            .container
+                p
+                    | Made by 
+                    a(href='spicedeveloper.ru/') Spice Developers

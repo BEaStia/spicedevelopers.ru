@@ -91,67 +91,67 @@ describe('PageController', ()=> {
       var pages = [
        {
          address: "/",
-         title: 'Главная Spice developers',
-         description: "Главная страница Spice Developers разработчиков на Ruby, JS, C#",
-         keywords: "ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг",
+         title: '',
+         description: "",
+         keywords: "",
          view: 'main',
        },
        {
          address: "/index(\.html)?",
-         title: 'Главная Spice developers',
-         description: "Главная страница Spice Developers разработчиков на Ruby, JS, C#",
-         keywords: "ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг",
+         title: '',
+         description: "",
+         keywords: "",
          view: 'main',
        },
        {
          address: "/about(\.html)?",
-         title: 'Информация о Spice developers',
-         description: "Страница отзывов Spice Developers разработчиков на Ruby, JS, C#",
-         keywords: 'ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг, отзывы',
+         title: 'Konnect A Hosting Category Flat Bootstarp Resposive Website Template | About :: w3layouts',
+         description: "",
+         keywords: 'Konnect Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design',
          view: 'about'
        },
        {
-         address: "/contacts(\.html)?",
-         view: 'contacts',
-         title: 'Контакты',
-         description: 'Контакты Spice Developers разработчиков на Ruby, JS, C#',
-         keywords: 'ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг, связь',
+         address: "/blog(\.html)?",
+         view: 'blog',
+         title: '',
+         description: '',
+         keywords: '',
        },
        {
-         title: 'Уроки от Spice developers',
-         description: 'Страница уроков Spice Developers разработчиков на Ruby, JS, C#',
-         keywords: 'ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг, уроки',
-         view: 'lessons',
-         address: '/lessons(\.html)?'
+         title: '',
+         description: '',
+         keywords: '',
+         view: 'support',
+         address: '/support(\.html)?'
        },
        {
-         address: '/jobs(\.html)?',
-         view: 'portfolio',
-         title: 'Вакансии Spice developers',
-         description: 'Страница ваканисй Spice Developers разработчиков на Ruby, JS, C#',
-         keywords: 'ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг, вакансии, вакансии для программистов'
+         address: '/domain(\.html)?',
+         view: 'domain',
+         title: '',
+         description: '',
+         keywords: ''
        },
        {
-         address: '/portfolio(\.html)?',
-         view: '',
-         title: 'Портфолио Spice developers',
-         description: 'Портфолио, примеры работ Spice Developers разработчиков на Ruby, JS, C#',
-         keywords: 'ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг, примеры работ'
+         address: '/single(\.html)?',
+         view: 'single',
+         title: '',
+         description: '',
+         keywords: ''
        },
        {
-         address: '/services(\.html)?',
-         view: 'services',
-         title: 'Услуги Spice Developers',
-         description: 'Список услуг Spice Developers разработчиков на Ruby, JS, C#',
-         keywords: 'ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг, услуги, услуги по разработке, консультации, аудит'
+         address: '/plans(\.html)?',
+         view: 'plans',
+         title: '',
+         description: '',
+         keywords: ''
        },
-       {
-         address: '/lesson1(\.html)?',
-         view: 'lesson1',
-         title: 'Урок 0: Введение',
-         description: 'Вводной урок в интернет-технологии',
-         keywords: 'ruby, javascript, JS, разработчики, обучение программированию, developers, spice developers, дипломы, аутсорсинг, уроки'
-       }
+          {
+              address: '/services(\.html)?',
+              view: 'services',
+              title: '',
+              description: '',
+              keywords: ''
+          }
      ];
       pageModel.Page.bulkCreate(pages).then(()=>{
       pageModel.Page.all().then((page_list)=>{

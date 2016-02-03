@@ -1,55 +1,89 @@
 doctype html
-html(lang='ru')
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='content-type', content='text/html; charset=UTF-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
-    meta(name='description', content= description)
-    meta(name='keywords', content= keywords)
-    link(rel='icon', href='/favicon.ico', type='image/x-icon')
-    title= title
-    link(rel='stylesheet', href='/css/bootstrap.css')
-    link(rel='stylesheet', href='/css/site.css')
-    link(rel='stylesheet', href='/css/stylish-portfolio.css')
-    link(rel='stylesheet', href='/font-awesome/css/font-awesome.min.css')
-    script(type='text/javascript', src='//vk.com/js/api/openapi.js?117')
-    script(type='text/javascript').
-      VK.init({apiId: 5047476, onlyWidgets: true});
-    script.
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1623507414568744',
-          xfbml      : true,
-          version    : 'v2.4'
-        });
-      };
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-  body
-    // Rating@Mail.ru counter
-    script(type='text/javascript').
-      var _tmr = _tmr || [];
-      _tmr.push({id: "2686934", type: "pageView", start: (new Date()).getTime()});
-      (function (d, w, id) {
-        if (d.getElementById(id)) return;
-        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-        ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-        var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-      })(document, window, "topmailru-code");
-    noscript
-      div(style='position:absolute;left:-10000px;')
-        img(src='//top-fwz1.mail.ru/counter?id=2686934;js=na', style='border:0;', height='1', width='1', alt='Рейтинг@Mail.ru')
+//
+  Author: W3layouts
+  Author URL: http://w3layouts.com
+  License: Creative Commons Attribution 3.0 Unported
+  License URL: http://creativecommons.org/licenses/by/3.0/
+html
+    head
+        title= title
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+        meta(name='description', content= description)
+        meta(name='keywords', content= keywords)
 
-    // //Rating@Mail.ru counter
-    block content
-    script(src='/js/jquery-1.11.2.min.js')
-    script(src='/js/bootstrap.min.js')
-    block after
+        script(type='application/x-javascript').
+            addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+        link(href='css/bootstrap.css', rel='stylesheet', type='text/css')
+        // jQuery (necessary for Bootstrap's JavaScript plugins)
+        script(src='js/jquery-1.11.1.min.js')
+        // Custom Theme files
+        link(href='css/style.css', rel='stylesheet', type='text/css')
+        // Custom Theme files
+        // webfonts
+        link(href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900', rel='stylesheet', type='text/css')
+        // webfonts
+        // dropdown
+        script(src='js/jquery.easydropdown.js')
+        // Add fancyBox main JS and CSS files
+        script(src='js/jquery.magnific-popup.js', type='text/javascript')
+        link(href='css/popup.css', rel='stylesheet', type='text/css')
+        script.
+            $(document).ready(function() {
+                $('.popup-with-zoom-anim').magnificPopup({
+                    type: 'inline',
+                    fixedContentPos: false,
+                    fixedBgPos: true,
+                    overflowY: 'auto',
+                    closeBtnInside: true,
+                    preloader: false,
+                    midClick: true,
+                    removalDelay: 300,
+                    mainClass: 'my-mfp-zoom-in'
+                });
+            });
+    body
+        .header
+            .header_top
+                .container
+                    .col-sm-6.header-top-left
+                    .col-sm-6.header-top-right
+                        .col-xs-7.phone
+                            p Круглосуточная поддержка 010-25418796
+                        .col-xs-5.check_box
+                            a(href='#')
+                                ul.check
+                                    i.cart
+                                    li.cart_desc Купить сейчас
+                                    .clearfix
+                        .clearfix
+                    .clearfix
+            .container
+                .header_bottom
+                    .col-xs-3.logo
+                        a(href='index.html')
+                            h1 Hosting Node
+                    .col-xs-9.header_nav
+                        .col-xs-9.menu
+                            a.toggleMenu(href='#')
+                                img(src='images/nav_icon.png', alt='')
+                            ul#nav.nav
+                                li.current
+                                    a(href='index.html') Главная
+                                li
+                                    a(href='about.html') Почему мы
+                                li
+                                    a(href='services.html') Услуги
+                                li
+                                    a(href='404.html') Отзывы
+                                li
+                                    a(href='blog.html') Блог
+                                li
+                                    a(href='support.html') Поддержка
+                            script(type='text/javascript', src='js/responsive-nav.js')
+                        .col-xs-3.header_but
+                            menu#cl-effect-8.cl-effect-8
+                                a(href='#') Вход
+                        .clearfix
+                    .clearfix
+            block content

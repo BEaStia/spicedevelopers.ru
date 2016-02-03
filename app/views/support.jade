@@ -1,0 +1,22 @@
+extends layout
+block content
+        .map
+            iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3150859.767904157!2d-96.62081048651531!3d39.536794757966845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1408111832978')
+        .about.contact
+            .container
+                form(method='post', action='contact-post.html')
+                    .to
+                        input.text(type='text', value='Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Name';}")
+                        input.text(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}", style='margin-left: 10px')
+                    .to
+                        input.text(type='text', value='Your Website', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Your Website';}")
+                        input.text(type='text', value='Subject', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Subject';}", style='margin-left: 10px')
+                    .text
+                        textarea(value='Message:', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Message';}") Message:
+                    div
+                        input(type='submit', value='Submit')
+        .footer
+            .container
+                p
+                    | Template by
+                    a(href='http://w3layouts.com/') W3layouts

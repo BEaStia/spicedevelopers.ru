@@ -1,107 +1,383 @@
 extends layout
 block content
-    section
-        .text-center.curtain
-            .container-fluid
-                .row-fluid
-                    .col-lg-3
-                        img.pull-left(src='/img/logo.png', width='413', height='181', alt='Logo')
-                    .col-lg-5.well.margin-top-50
-                        h1.text-center Здравствуйте!
-                        br
-                        h2.text-left
-                            | Мы молодая и амбициозная команда разработчиков, нас зовут Spice Developers, и мы предлагаем:
-                    .col-md-4
-                        ul.nav-stacked.nav-pills.nav.well
-                            li.active(role='presentation')
-                                a(href='#') Главная
-                            li(role='presentation')
-                                a(href='/contacts') Контакты
-                            li(role='presentation')
-                                a(href='/jobs') Вакансии
-                            li(role='presentation')
-                                a(href='/services') Услуги
-                            li(role='presentation')
-                                a(href='/portfolio') Портфолио
-                            li(role='presentation')
-                                a(href='/about') Отзывы
-                            li(role='presentation')
-                                a(href='/lessons') Уроки
-            .container-fluid
-                .row-fluid
-                    .col-md-offset-3.col-lg-5
-                        .panel.panel-default
-                            .panel-heading
-                                h4.text-danger
-                                    strong Предпринимателям
-                            .panel-body
-                                p Широкий спектр решений для Вашего бизнеса в следующих направлениях:
-                                ul.text-left
-                                    li(role='')
-                                        a(href='#') Сайты
-                                    li(role='')
-                                        a(href='#')  Мобильные приложения
-                                    li(role='')
-                                        a(href='#') Отраслевые решения и системы управления
-                        .panel.panel-default
-                            .panel-heading
-                                h4
-                                    strong IT-компаниям
-                            .panel-body
-                                p Мы готовы рассмотреть Ваши условия и взять на себя самые неприятные
-                                p части Вашей работы. Spice Developers - это аутсорсинг на выгодных условиях.
-                                p Также, мы можем поделиться с Вами опытом разработки и предложить готовые
-                                p технологии и бизнес-модели.
-                        .panel.panel-default
-                            .panel-heading
-                                h4.text-muted
-                                    strong Студентам
-                            .panel-body
-                                p Любая возможная помощь по IT-предметам. Мы сделаем
-                                p Вашу учебу проще и, при необходимости, поможем
-                                p получить необходимые знания
-                    .col-lg-3 !{banner}
-            .container-fluid.margin-top-20
-                .row-fluid
-                    .row
-                        img.img-responsive(src='/img/bottom.png', alt='Placeholder image')
-                .row.margin-top-40
-                    .col-lg-6.col-lg-offset-3
-                        h2
-                            p Остались вопросы?
-                            p Свяжитесь с нами
-                        form(role='form', action='MAILTO:spicecoders@gmail.com', method='post', enctype='text/plain')
-                            .col-lg-12
-                                .alert-info
-                                    span.glyphicon.glyphicon-ok
-                                    |  - Обязательные поля
-                                .form-group
-                                    label(for='InputName') Как Вас зовут
-                                    .input-group
-                                        input#InputName.form-control(type='text', name='InputName', placeholder='', required='')
-                                        span.input-group-addon
-                                            i.glyphicon.glyphicon-ok.form-control-feedback
-                                .form-group
-                                    label(for='InputEmail') Ваш Email
-                                    .input-group
-                                        input#InputEmail.form-control(type='email', name='InputEmail', placeholder='Email', required='')
-                                        span.input-group-addon
-                                            i.glyphicon.glyphicon-ok.form-control-feedback
-                                .form-group
-                                    label(for='InputMessage') Сообщение
-                                    .input-group
-                                        textarea#InputMessage.form-control(name='InputMessage', rows='5', required='')
-                                        span.input-group-addon
-                                            i.glyphicon.glyphicon-ok.form-control-feedback
-                                input#submit.btn.btn-info(type='submit', name='submit', value='Отправить')
-            div(itemscope='', itemtype='http://schema.org/Organization', hidden='')
-                span(itemprop='address') Moscow, Volgogradsky Prospect, 20
-                span(itemprop='brand') Spice Developers
-                span(itemprop='contactPoint') Igor Pavlov
-                span(itemprop='founder') Igor Pavlov
-                span(itemprop='logo')
-                    img(src='/img/logo.png', alt='Logo')
-                span(itemprop='makesOffer') Consulting, OutSourcing
-                span(itemprop='name') Spice Developers
-                span(itemprop='telephone') +7-920-361-15-56
-                a(itemprop='email', href='mailto:spicecoders@gmail.com') spicecoders@gmail.com
+        .header_bot_grid
+            h1 Для сайтов на Node.js идеально подойдет Хостинг Node!
+            .header-btns
+                a.plans.btn.btn-primary1.btn-normal.btn-inline(href='plans.html') Посмотреть тарифы
+                a.plans.btn.btn-primary2.btn-normal.btn-inline(href='domain.html') Купить домен
+            span
+        .content_top
+            .container
+                .col-md-3.grid_1
+                    i.time
+                    h3 99.99% Работы серверов
+                    p
+                        | С нами вы можете не бояться за сохранность ваших данных и за упущенных клиентов:
+                .col-md-3.grid_1
+                    i.platform
+                    h3 Разные платформы
+                    p
+                        | Хостинг мы предоставляем как на Ubuntu, так и на Windows. Пользуйтесь тем, к чему привыкли.
+                .col-md-3.grid_1
+                    i.fast
+                    h3 Безумно быстро
+                    p
+                        | Наши новые SSD диски на самых свежих контроллерах от Intel жгут не по-детски, сервера летают, как ракеты.
+                .col-md-3.grid_1
+                    i.data
+                    h3 Восстановление данных
+                    p
+                        | Мы предоставляем полную гарантию восстановления потерянных по нашей вине данных
+        .content_bottom
+            .container
+                .box3
+                    h2 Простое и понятное ценообразование всегда к вашим услугам!
+                    p
+                        | Забудьте о неожиданных ночных списаниях с AWS. С нами Вас ждет ежемесячное выставление счета на WebMoney и мягкие уведомления на почту.
+                .plans
+                    .col-md-3
+                        .pricing-table-grid
+                            .plans_head
+                                h3 Простой подход
+                                h4.m_4
+                                    small.m_2 $
+                                    | 10
+                                    small.m_3(small='') /mo
+                                p Наш простой и дешевый тариф позволит Вам очень быстро получить прибыль
+                            ul
+                                li
+                                    a(href='#') 20GB на HDD
+                                li
+                                    a(href='#') 20GB Траффика
+                                li
+                                    a(href='#') Любые IP адреса посетителей
+                                li
+                                    a(href='#') 10 доменов
+                                li
+                                    a(href='#') 30 Email ящиков
+                                li
+                                    a(href='#') Автоматические бекапы
+                            a.popup-with-zoom-anim.button(href='#small-dialog') Заказать сейчас
+                            #small-dialog.mfp-hide
+                                .pop_up
+                                    .payment-online-form-left
+                                        form
+                                            h4
+                                                span.shipping
+                                                | Shipping
+                                            ul
+                                                li
+                                                    input.text-box-dark(type='text', value='Имя', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Имя';}")
+                                                li
+                                                    input.text-box-dark(type='text', value='Фамилия', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Фамилия';}")
+                                            ul
+                                                li
+                                                    input.text-box-dark(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}")
+                                                li
+                                                    input.text-box-dark(type='text', value='Название фирмы', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Название фирмы';}")
+                                            ul
+                                                li
+                                                    input.text-box-dark(type='text', value='Телефон', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '+7';}")
+                                                li
+                                                    input.text-box-dark(type='text', value='Адрес', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Адрес';}")
+                                                .clearfix
+                                            .clear
+                                            ul.payment-type
+                                                h4
+                                                    span.payment
+                                                    |  Payments
+                                                li
+                                                    span.col_checkbox
+                                                        input#3.css-checkbox1(type='checkbox')
+                                                        label.css-label1(for='3', name='demo_lbl_1')
+                                                        a.visa(href='#')
+                                                li
+                                                    span.col_checkbox
+                                                        input#4.css-checkbox2(type='checkbox')
+                                                        label.css-label2(for='4', name='demo_lbl_2')
+                                                        a.paypal(href='#')
+                                                .clearfix
+                                            ul
+                                                li
+                                                    input.text-box-dark(type='text', value='Card Number', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Card Number';}")
+                                                li
+                                                    input.text-box-dark(type='text', value='Name on card', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Name on card';}")
+                                                .clearfix
+                                            ul
+                                                li
+                                                    input#datepicker.text-box-light.hasDatepicker(type='text', value='Expiration Date', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Expiration Date';}")
+                                                    em.pay-date
+                                                li
+                                                    input.text-box-dark(type='text', value='Security Code', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Security Code';}")
+                                                .clearfix
+                                            ul.payment-sendbtns
+                                                li
+                                                    input(type='reset', value='Cancel')
+                                                li
+                                                    input(type='submit', value='Process order')
+                                            .clearfix
+                    .col-md-3
+                        .pricing-table-grid
+                            .plans_head1
+                                h3 Деловой подход
+                                h4.m_4
+                                    small.m_2 $
+                                    | 24
+                                    small.m_3(small='') /mo
+                                p Если Вам нужно что-то посерьезней
+                            ul
+                                li
+                                    a(href='#') 20GB на HDD
+                                li
+                                    a(href='#') 50GB Траффика
+                                li
+                                    a(href='#') Любые IP адреса посетителей
+                                li
+                                    a(href='#') 50 доменов
+                                li
+                                    a(href='#') 50 Email ящиков
+                                li
+                                    a(href='#') Автоматические бекапы
+                            a.popup-with-zoom-anim.button1(href='#small-dialog') Заказать
+                    .col-md-3
+                        .pricing-table-grid
+                            .plans_head
+                                h3 Business
+                                h4.m_4
+                                    small.m_2 $
+                                    | 99
+                                    small.m_3(small='') /mo
+                                p Когда Вам не нужны компромиссы
+                            ul
+                                li
+                                    a(href='#') 40GB на HDD
+                                li
+                                    a(href='#') 1TB Траффика
+                                li
+                                    a(href='#') Любые IP адреса посетителей
+                                li
+                                    a(href='#') 100 доменов
+                                li
+                                    a(href='#') 100 Email ящиков
+                                li
+                                    a(href='#') Автоматические бекапы
+                            a.popup-with-zoom-anim.button(href='#small-dialog') Заказать
+                    .col-md-3
+                        .pricing-table-grid1
+                            p Хотите попробовать?
+                            h5 Начальный тариф
+                            h4.m_4.m_5
+                                small.m_2.sm1 $
+                                | 0
+                                small.m_3.sm2(small='') /mo
+                            a.popup-with-zoom-anim.button(href='#small-dialog') Попробуйте прямо сейчас
+                    .clearfix
+                .plans_desc
+                    h3 Хотите поправить что-то в своем плане ?
+                    a.contact_btn(href='#') Свяжитесь с нами
+        .domain
+            .container
+                h2 Купите домен своей мечты у нас !!
+                .search-box
+                    // domian search
+                    form(action='domain.html')
+                        .domain-search-box
+                            // <input type="hidden" name="showrelated" value="true">
+                            input.domains-input.optionalField(type='text', maxlength='30', onfocus="this.value = '';", value='Купите домен у нас.')
+                            .domains-select
+                                span#tldDisplay.tlds .com
+                                span.tlds-dd
+                                .ie-fix
+                                    select#tldlist.brd-fix
+                                        option(value='com') .com
+                                        option(value='net') .net
+                                        option(value='in') .in
+                                        option(value='org') .org
+                                        option(value='info') .info
+                                        option(value='biz') .biz
+                                        option(value='us') .us
+                                        option(value='eu') .eu
+                                        option(value='co.uk') .co.uk
+                                        option(value='mobi') .mobi
+                                        option(value='asia') .asia
+                                        option(value='name') .name
+                                        option(value='tel') .tel
+                                        option(value='co.in') .co.in
+                                        option(value='tv') .tv
+                                        option(value='me') .me
+                                        option(value='ws') .ws
+                                        option(value='bz') .bz
+                                        option(value='cc') .cc
+                                        option(value='org.uk') .org.uk
+                                        option(value='me.uk') .me.uk
+                                        option(value='net.in') .net.in
+                                        option(value='org.in') .org.in
+                                        option(value='ind.in') .ind.in
+                                        option(value='firm.in') .firm.in
+                                        option(value='gen.in') .gen.in
+                                        option(value='mn') .mn
+                                        option(value='us.com') .us.com
+                                        option(value='eu.com') .eu.com
+                                        option(value='uk.com') .uk.com
+                                        option(value='uk.net') .uk.net
+                                        option(value='gb.com') .gb.com
+                                        option(value='gb.net') .gb.net
+                                        option(value='de.com') .de.com
+                                        option(value='cn.com') .cn.com
+                                        option(value='qc.com') .qc.com
+                                        option(value='kr.com') .kr.com
+                                        option(value='ae.org') .ae.org
+                                        option(value='br.com') .br.com
+                                        option(value='hu.com') .hu.com
+                                        option(value='jpn.com') .jpn.com
+                                        option(value='no.com') .no.com
+                                        option(value='ru.com') .ru.com
+                                        option(value='sa.com') .sa.com
+                                        option(value='se.com') .se.com
+                                        option(value='se.net') .se.net
+                                        option(value='uy.com') .uy.com
+                                        option(value='za.com') .za.com
+                                        option(value='cn') .cn
+                                        option(value='com.cn') .com.cn
+                                        option(value='net.cn') .net.cn
+                                        option(value='org.cn') .org.cn
+                                        option(value='co') .co
+                                        option(value='gr.com') .gr.com
+                                        option(value='co.nz') .co.nz
+                                        option(value='net.nz') .net.nz
+                                        option(value='org.nz') .org.nz
+                                        option(value='com.co') .com.co
+                                        option(value='net.co') .net.co
+                                        option(value='nom.co') .nom.co
+                                        option(value='ca') .ca
+                                        option(value='de') .de
+                                        option(value='es') .es
+                                        option(value='com.au') .com.au
+                                        option(value='net.au') .net.au
+                                        option(value='xxx') .xxx
+                                        option(value='ru') .ru
+                                        option(value='com.ru') .com.ru
+                                        option(value='net.ru') .net.ru
+                                        option(value='org.ru') .org.ru
+                                        option(value='pro') .pro
+                                        option(value='sx') .sx
+                                        option(value='nl') .nl
+                                        option(value='pw') .pw
+                            input.domain-submit(type='submit', value='', onclick='')
+                script(type='text/javascript').
+                    $('#tldlist').change(function(event) {
+                        $('#tldDisplay').html( '.' +$('#tldlist').val());
+                    });
+                // /domian search
+        .services
+            .container
+                .span_1
+                    h3 Наши услуги
+                    p
+                        | Мы предлагаем обширный перечень услуг для вашего бизнеса
+                .span_2
+                    .span_2-top
+                        .col-md-4
+                            ul.hosting
+                                i.icon1
+                                li.host_desc
+                                    h4 Хостинг сайтов
+                                    p
+                                        | Мы на этом зарабатываем, мы этим живем, поэтому мы умеем это делать, как никто другой
+                                    a.button2(href='#') Узнать больше
+                        .col-md-4
+                            ul.hosting
+                                i.icon2
+                                li.host_desc
+                                    h4 Покупка доменов
+                                    p
+                                        | Мы являемся клиентом Reg.ru и продаем домены по партнерской цене
+                                    a.button2(href='#') Узнать больше
+                        .col-md-4
+                            ul.hosting
+                                i.icon3
+                                li.host_desc
+                                    h4 FTP
+                                    p
+                                        | Мы можем сдать Вам в аренду фтп-сервер, как в старые добрые времена
+                                    a.button2(href='#') Узнать больше
+                        .clearfix
+                    .span_2-bottom
+                        .col-md-4
+                            ul.hosting
+                                i.icon4
+                                li.host_desc
+                                    h4 VDS
+                                    p
+                                        | У нас Вы сможете купить доступ к виртуальной машине физического уровня , на которой будет крутиться нужный софт
+                                    a.button2(href='#') Узнать больше
+                        .col-md-4
+                            ul.hosting
+                                i.icon5
+                                li.host_desc
+                                    h4 VPS Server
+                                    p
+                                        | У нас Вы сможете купить доступ к виртуальной машине программного уровня , на которой будет крутиться нужный софт
+                                    a.button2(href='#') Узнать больше
+                        .col-md-4
+                            ul.hosting
+                                i.icon6
+                                li.host_desc
+                                    h4 SSL Сертификаты
+                                    p
+                                        | А еще Вы можете докупить SSL сертификат на наш сайт: чтобы обезопасить себя
+                                    a.button2(href='#') Узнать больше
+                        .clearfix
+        .about_grid
+            .container
+                .span_1.span_3
+                    h4 О нас
+                    p
+                        | Наша фирма уже достаточно долго занимается разработкой и помощью по сайтам
+                .span_5
+                    .col-md-5.span_5-left
+                        p.m_1
+                            | У нас в серверах стоят ксеоны SkyLake-поколения, очень шустрые SSD от Intel.
+                        a.button3(href='#') Узнать больше
+                    .col-md-7
+                        .span_5-right
+                            span
+                    .clearfix
+        .testimonail
+            .container
+                ul.test
+                    li.test_img
+                        img.img-responsive(src='images/test_pic.png', alt='')
+                    li.test_desc
+                        p
+                            span.quotes
+                            | Я регулярно выезжаю по клиентам и помогаю им в настройке оборудования
+                            span.link
+                                a(href='#') шлюшка (CEO)
+                    .clearfix
+        .map
+            iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3150859.767904157!2d-96.62081048651531!3d39.536794757966845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1408111832978')
+        .contact_index
+            .container
+                .col-md-8.contact_index-left
+                    h3 Связаться с нами
+                    .contact-form
+                        form
+                            input.textbox(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}")
+                            textarea(value='Сообщение:', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Message';}") Message
+                            input(type='submit', value='Send Now')
+                .col-md-4.contact_index-right
+                    h3 Другая связь
+                    ul.footer_social
+                        li
+                            a(href='#')
+                                i.email
+                        li
+                            a(href='#')
+                                i.chat
+                        li
+                            a(href='#')
+                                i.report
+                        li
+                            a(href='#')
+                                i.phone

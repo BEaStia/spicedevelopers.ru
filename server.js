@@ -18,7 +18,7 @@ log4js.configure({
 var logger = log4js.getLogger('spice');
 app.set('logger', logger);
 
-var server = app.listen(8484, function () {
+var server = app.listen(8485, function () {
     require('./router');
 });
 
