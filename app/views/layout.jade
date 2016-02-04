@@ -25,6 +25,7 @@ html
         // webfonts
         // dropdown
         script(src='js/jquery.easydropdown.js')
+        script(src='js/bootstrap.min.js')
         // Add fancyBox main JS and CSS files
         script(src='js/jquery.magnific-popup.js', type='text/javascript')
         link(href='css/popup.css', rel='stylesheet', type='text/css')
@@ -75,15 +76,36 @@ html
                                 li
                                     a(href='services.html') Услуги
                                 li
-                                    a(href='404.html') Отзывы
-                                li
                                     a(href='blog.html') Блог
                                 li
                                     a(href='support.html') Поддержка
                             script(type='text/javascript', src='js/responsive-nav.js')
                         .col-xs-3.header_but
                             menu#cl-effect-8.cl-effect-8
-                                a(href='#') Вход
+                            button.btn.btn-lg(type='button', data-toggle='modal', data-target='#myModal')
+                                | Вход
+
                         .clearfix
                     .clearfix
+            #myModal.modal.fade(tabindex='-1', role='dialog')
+                .modal-dialog
+                    .modal-content
+                        .modal-header
+                            button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                span(aria-hidden='true') ×
+                            h4.modal-title Вход в личный кабинет
+                        .modal-body
+                            form.form-signin(action="/login")
+                                h2.form-signin-heading Введите адрес почты и пароль
+                                label.sr-only(for='inputEmail') Логин
+                                input#inputEmail.form-control(type='email', placeholder='Email', required='', autofocus='',name="email")
+                                label.sr-only(for='inputPassword') Пароль
+                                input#inputPassword.form-control(type='password', placeholder='Пароль', required='',name="password")
+                                .checkbox
+                                    label
+                                        input(type='checkbox', value='remember-me', name=remember)
+                                        |  Запомнить меня
+                                button.btn.btn-lg.btn-primary.btn-block(type='submit') Войти
+                        .modal-footer
+                            button.btn.btn-default(type='button', data-dismiss='modal') Закрыть
             block content
