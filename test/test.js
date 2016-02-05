@@ -145,13 +145,20 @@ describe('PageController', ()=> {
          description: '',
          keywords: ''
        },
-          {
-              address: '/services(\.html)?',
-              view: 'services',
-              title: '',
-              description: '',
-              keywords: ''
-          }
+      {
+          address: '/services(\.html)?',
+          view: 'services',
+          title: '',
+          description: '',
+          keywords: ''
+      },
+      {
+          address: '/refund.html',
+          view: 'refund',
+          title: '',
+          description: '',
+          keywords: ''
+      }
      ];
       pageModel.Page.bulkCreate(pages).then(()=>{
       pageModel.Page.all().then((page_list)=>{
