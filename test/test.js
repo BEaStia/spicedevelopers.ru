@@ -94,52 +94,52 @@ describe('PageController', ()=> {
          title: '',
          description: "",
          keywords: "",
-         view: 'main',
+         view: 'main'
        },
        {
-         address: "/index(\.html)?",
+         address: "/index.html",
          title: '',
          description: "",
          keywords: "",
-         view: 'main',
+         view: 'main'
        },
        {
-         address: "/about(\.html)?",
+         address: "/about.html",
          title: 'Konnect A Hosting Category Flat Bootstarp Resposive Website Template | About :: w3layouts',
          description: "",
          keywords: 'Konnect Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design',
          view: 'about'
        },
        {
-         address: "/blog(\.html)?",
+         address: "/blog.html",
          view: 'blog',
          title: '',
          description: '',
-         keywords: '',
+         keywords: ''
        },
        {
          title: '',
          description: '',
          keywords: '',
          view: 'support',
-         address: '/support(\.html)?'
+         address: '/support.html'
        },
        {
-         address: '/domain(\.html)?',
+         address: '/domain.html',
          view: 'domain',
          title: '',
          description: '',
          keywords: ''
        },
        {
-         address: '/single(\.html)?',
+         address: '/single.html',
          view: 'single',
          title: '',
          description: '',
          keywords: ''
        },
        {
-         address: '/plans(\.html)?',
+         address: '/plans.html',
          view: 'plans',
          title: '',
          description: '',

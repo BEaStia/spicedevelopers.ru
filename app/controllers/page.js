@@ -1,20 +1,19 @@
 var PageModel = require('../models/page_model');
 var VisitorModel = require('../models/visitor');
-
-var app = require('../../server').app;
 var functions = {};
 exports.functionsPromise = PageModel.getPages().then(function(items) {
-        return new Promise(function (resolve, reject) {
+        return new Promise(function (resolve) {
             items.forEach(function (item) {
-                console.log("adding function to " + item);
                 var function_name = item['address'].substr(1, item['address'].length - 1);
                 var answer = function (req, res) {
                     var params = {
                         title: item['title'],
                         description: item['description'],
-                        keywords: item['keywords']
+                        keywords: item['keywords'],
+                        address: item['address']
                     };
                     params = add_banner(req, res, params);
+                    console.log(params);
                     res.render(item['view'], params);
                 };
                 functions[function_name] = answer;
@@ -24,7 +23,6 @@ exports.functionsPromise = PageModel.getPages().then(function(items) {
     });
 
 exports.functions = functions;
-
 var add_banner = function(req, res, params) {
     var ip = req.headers['x-forwarded-for'];
 

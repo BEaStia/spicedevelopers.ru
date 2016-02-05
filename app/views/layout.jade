@@ -69,15 +69,15 @@ html
                             a.toggleMenu(href='#')
                                 img(src='images/nav_icon.png', alt='')
                             ul#nav.nav
-                                li.current
+                                li(class=(address === '/index.html') ? 'current' : '')
                                     a(href='index.html') Главная
-                                li
+                                li(class=(address === '/about.html') ? 'current' : '')
                                     a(href='about.html') Почему мы
-                                li
+                                li(class=(address === '/services.html') ? 'current' : '')
                                     a(href='services.html') Услуги
-                                li
-                                    a(href='blog.html') Блог
-                                li
+                                li(class=(address === '/blog.html') ? 'current' : '')
+                                    a(href='blog.html') О нас
+                                li(class=(address === '/support.html') ? 'current' : '')
                                     a(href='support.html') Поддержка
                             script(type='text/javascript', src='js/responsive-nav.js')
                         .col-xs-3.header_but
