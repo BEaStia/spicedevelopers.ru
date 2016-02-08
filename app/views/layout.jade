@@ -1,9 +1,4 @@
 doctype html
-//
-  Author: W3layouts
-  Author URL: http://w3layouts.com
-  License: Creative Commons Attribution 3.0 Unported
-  License URL: http://creativecommons.org/licenses/by/3.0/
 html
     head
         title= title
@@ -61,11 +56,11 @@ html
                     .clearfix
             .container
                 .header_bottom
-                    .col-xs-3.logo
+                    .col-xs-2.logo
                         a(href='index.html')
                             h1 Hosting Node
-                    .col-xs-9.header_nav
-                        .col-xs-9.menu
+                    .col-xs-10.header_nav
+                        .col-xs-11.menu
                             a.toggleMenu(href='#')
                                 img(src='images/nav_icon.png', alt='')
                             ul#nav.nav
@@ -79,8 +74,12 @@ html
                                     a(href='blog.html') О нас
                                 li(class=(address === '/support.html') ? 'current' : '')
                                     a(href='support.html') Поддержка
+                                li(class=(address === '/plans.html') ? 'current' : '')
+                                    a(href='plans.html') Тарифы
+                                li(class=(address === '/refund.html') ? 'current' : '')
+                                    a(href='refund.html') Возврат средств
                             script(type='text/javascript', src='js/responsive-nav.js')
-                        .col-xs-3.header_but
+                        .col-xs-1.header_but
                             menu#cl-effect-8.cl-effect-8
                             button.btn.btn-lg(type='button', data-toggle='modal', data-target='#myModal')
                                 | Вход
@@ -109,3 +108,17 @@ html
                         .modal-footer
                             button.btn.btn-default(type='button', data-dismiss='modal') Закрыть
             block content
+            .contact_index#contact-form
+                .container
+                    .col-md-12.contact_index-left
+                        h3 Свяжитесь с нами
+                        .contact-form
+                            form
+                                input.textbox(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}")
+                                textarea(value='Сообщение:', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Текст';}") Текст сообщения
+                                input(type='submit', value='Отправить')
+            .footer
+                .container
+                    p
+                        | Сделано в
+                        a(href='http://spicedevelopers.ru') Spice developers(2015-2016)

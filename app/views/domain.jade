@@ -1,85 +1,93 @@
 extends layout
 block domain
-        .about
-            .container
-                h1.m_1
-                    | Search the best domain
-                    form.search-form.domain-search
-                        .three-fifth.column.first
-                            input.text(type='text', value='Looking for Domains ?', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Looking for Domains ?';}")
-                        .one-fifth.column
-                            span.selection-box
-                                select.domains.valid(name='domains')
-                                    option .com (From $3 / Year)
-                                    option .info (From $3 / Year)
-                                    option .net (From $3 / Year)
-                                    option .org (From $3 / Year)
-                        .one-fifth.column
-                            input(type='submit', value='Send Now')
-                        .clearfix
-                    .new_domain
-                        h2 New Domains
-                        .col-md-6
-                            ul.list_3
-                                li
-                                    span .nyc
-                                    a.dt-sc-button.small(href='#', target='_blank') Register
-                                li
-                                    span .vegas
-                                    a.dt-sc-button.small(href='#', target='_blank') Register
-                                li
-                                    span .website
-                                    a.dt-sc-button.small(href='#', target='_blank') Register
-                                li
-                                    span .app
-                                    a.dt-sc-button.small(href='#', target='_blank') Register
-                                li
-                                    span .ask
-                                    a.dt-sc-button.small(href='#', target='_blank') Register
-                        .col-md-6
-                            ul.list_3
-                                li
-                                    span .lip
-                                    a.dt-sc-button.small(href='#', target='_blank') Register
-                                li
-                                    span .wiki
-                                    a.dt-sc-button.small(href='#', target='_blank') Register
-                                li
-                                    span .do
-                                    a.dt-sc-button.small(href='#', target='_blank') Register
-                                li
-                                    span .go
-                                    a.dt-sc-button.small(href='#', target='_blank') Register
-                                li
-                                    span .zipo
-                                    a.dt-sc-button.small(href='#', target='_blank') Register
-                        .clearfix
-        .contact_index
-            .container
-                .col-md-8.contact_index-left
-                    h3 Send Us A Message
-                    .contact-form
-                        form
-                            input.textbox(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}")
-                            textarea(value='Message:', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Message';}") Message
-                            input(type='submit', value='Send Now')
-                .col-md-4.contact_index-right
-                    h3 Quick Links
-                    ul.footer_social
-                        li
-                            a(href='#')
-                                i.email
-                        li
-                            a(href='#')
-                                i.chat
-                        li
-                            a(href='#')
-                                i.report
-                        li
-                            a(href='#')
-                                i.phone
-        .footer
-            .container
-                p
-                    | Template by
-                    a(href='http://w3layouts.com/') W3layouts
+    .domain
+        .container
+            h2 Купите домен своей мечты у нас !!
+            .search-box
+                form(action='domain.html')
+                    .domain-search-box
+                        input.domains-input.optionalField(type='text', maxlength='30', onfocus="this.value = '';", value='Купите домен у нас.')
+                        .domains-select
+                            span#tldDisplay.tlds .com
+                            span.tlds-dd
+                            .ie-fix
+                                select#tldlist.brd-fix
+                                    option(value='com') .com
+                                    option(value='net') .net
+                                    option(value='in') .in
+                                    option(value='org') .org
+                                    option(value='info') .info
+                                    option(value='biz') .biz
+                                    option(value='us') .us
+                                    option(value='eu') .eu
+                                    option(value='co.uk') .co.uk
+                                    option(value='mobi') .mobi
+                                    option(value='asia') .asia
+                                    option(value='name') .name
+                                    option(value='tel') .tel
+                                    option(value='co.in') .co.in
+                                    option(value='tv') .tv
+                                    option(value='me') .me
+                                    option(value='ws') .ws
+                                    option(value='bz') .bz
+                                    option(value='cc') .cc
+                                    option(value='org.uk') .org.uk
+                                    option(value='me.uk') .me.uk
+                                    option(value='net.in') .net.in
+                                    option(value='org.in') .org.in
+                                    option(value='ind.in') .ind.in
+                                    option(value='firm.in') .firm.in
+                                    option(value='gen.in') .gen.in
+                                    option(value='mn') .mn
+                                    option(value='us.com') .us.com
+                                    option(value='eu.com') .eu.com
+                                    option(value='uk.com') .uk.com
+                                    option(value='uk.net') .uk.net
+                                    option(value='gb.com') .gb.com
+                                    option(value='gb.net') .gb.net
+                                    option(value='de.com') .de.com
+                                    option(value='cn.com') .cn.com
+                                    option(value='qc.com') .qc.com
+                                    option(value='kr.com') .kr.com
+                                    option(value='ae.org') .ae.org
+                                    option(value='br.com') .br.com
+                                    option(value='hu.com') .hu.com
+                                    option(value='jpn.com') .jpn.com
+                                    option(value='no.com') .no.com
+                                    option(value='ru.com') .ru.com
+                                    option(value='sa.com') .sa.com
+                                    option(value='se.com') .se.com
+                                    option(value='se.net') .se.net
+                                    option(value='uy.com') .uy.com
+                                    option(value='za.com') .za.com
+                                    option(value='cn') .cn
+                                    option(value='com.cn') .com.cn
+                                    option(value='net.cn') .net.cn
+                                    option(value='org.cn') .org.cn
+                                    option(value='co') .co
+                                    option(value='gr.com') .gr.com
+                                    option(value='co.nz') .co.nz
+                                    option(value='net.nz') .net.nz
+                                    option(value='org.nz') .org.nz
+                                    option(value='com.co') .com.co
+                                    option(value='net.co') .net.co
+                                    option(value='nom.co') .nom.co
+                                    option(value='ca') .ca
+                                    option(value='de') .de
+                                    option(value='es') .es
+                                    option(value='com.au') .com.au
+                                    option(value='net.au') .net.au
+                                    option(value='xxx') .xxx
+                                    option(value='ru') .ru
+                                    option(value='com.ru') .com.ru
+                                    option(value='net.ru') .net.ru
+                                    option(value='org.ru') .org.ru
+                                    option(value='pro') .pro
+                                    option(value='sx') .sx
+                                    option(value='nl') .nl
+                                    option(value='pw') .pw
+                        input.domain-submit(type='submit', value='', onclick='')
+            script(type='text/javascript').
+                $('#tldlist').change(function (event) {
+                    $('#tldDisplay').html('.' + $('#tldlist').val());
+                });

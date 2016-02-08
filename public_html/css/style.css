@@ -21,12 +21,11 @@ body a{
 	-ms-transition:0.5s all;
 }
 .header{
-	background: url(../images/banner.jpg) no-repeat 0px 0px;
+	background: url(../images/banner.jpg) repeat-y 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	height: 810px;
 }
 .about_header{
 	background: url(../images/banner.jpg) no-repeat 0px 0px;

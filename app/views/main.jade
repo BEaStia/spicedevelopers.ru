@@ -61,10 +61,10 @@ block content
                             #small-dialog.mfp-hide
                                 .pop_up
                                     .payment-online-form-left
-                                        form
+                                        form(action='MAILTO:hostingnode.ads@gmail.com', method="post", enctype="text/plain")
                                             h4
                                                 span.shipping
-                                                | Shipping
+                                                | Заказ
                                             ul
                                                 li
                                                     input.text-box-dark(type='text', value='Имя', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Имя';}")
@@ -82,39 +82,11 @@ block content
                                                     input.text-box-dark(type='text', value='Адрес', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Адрес';}")
                                                 .clearfix
                                             .clear
-                                            ul.payment-type
-                                                h4
-                                                    span.payment
-                                                    |  Payments
-                                                li
-                                                    span.col_checkbox
-                                                        input#3.css-checkbox1(type='checkbox')
-                                                        label.css-label1(for='3', name='demo_lbl_1')
-                                                        a.visa(href='#')
-                                                li
-                                                    span.col_checkbox
-                                                        input#4.css-checkbox2(type='checkbox')
-                                                        label.css-label2(for='4', name='demo_lbl_2')
-                                                        a.paypal(href='#')
-                                                .clearfix
-                                            ul
-                                                li
-                                                    input.text-box-dark(type='text', value='Card Number', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Card Number';}")
-                                                li
-                                                    input.text-box-dark(type='text', value='Name on card', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Name on card';}")
-                                                .clearfix
-                                            ul
-                                                li
-                                                    input#datepicker.text-box-light.hasDatepicker(type='text', value='Expiration Date', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Expiration Date';}")
-                                                    em.pay-date
-                                                li
-                                                    input.text-box-dark(type='text', value='Security Code', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Security Code';}")
-                                                .clearfix
                                             ul.payment-sendbtns
                                                 li
-                                                    input(type='reset', value='Cancel')
+                                                    input(type='reset', value='Отмена')
                                                 li
-                                                    input(type='submit', value='Process order')
+                                                    input(type='submit', value='Оставить заявку')
                                             .clearfix
                     .col-md-3
                         .pricing-table-grid
@@ -353,7 +325,7 @@ block content
                             span.quotes
                             | Я регулярно выезжаю по клиентам и помогаю им в настройке оборудования
                             span.link
-                                a(href='#') шлюшка (CEO)
+                                a(href='#') Оксана (CEO)
                     .clearfix
         .map
             iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3150859.767904157!2d-96.62081048651531!3d39.536794757966845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1408111832978')
