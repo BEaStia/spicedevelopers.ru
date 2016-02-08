@@ -167,22 +167,22 @@ describe 'PageController', ->
         {
           address: '/plans.html'
           view: 'plans'
-          title: ''
-          description: ''
+          title: 'Наши тарифные планы'
+          description: 'Перечень наших тарифных планов и форма связи с нами'
           keywords: 'hosting, node, linux, windows, хостинг, линукс, ноде, джаваскрипт, яваскрипт, нода, нодежс'
         }
         {
           address: '/services(.html)?'
           view: 'services'
-          title: ''
-          description: ''
+          title: 'Наши услуги'
+          description: 'Услуги, которые мы оказываем'
           keywords: 'hosting, node, linux, windows, хостинг, линукс, ноде, джаваскрипт, яваскрипт, нода, нодежс'
         }
         {
           address: '/refund.html'
           view: 'refund'
-          title: ''
-          description: ''
+          title: 'Возврат средств'
+          description: 'Наша политика возврата средств покупателям'
           keywords: 'hosting, node, linux, windows, хостинг, линукс, ноде, джаваскрипт, яваскрипт, нода, нодежс'
         }
       ]

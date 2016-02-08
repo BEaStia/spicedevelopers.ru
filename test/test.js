@@ -128,64 +128,52 @@
         pages = [
           {
             address: '/',
-            title: '',
-            description: '',
-            keywords: '',
+            title: 'Добро пожаловать на HostingNode!',
+            description: 'Hosting Node Ваш хостинг, оперативная поддержка, помощь, низкие тарифы и доступные цены. Индивидуальный подход к клиентам',
+            keywords: 'hosting, node, linux, windows, хостинг, линукс, ноде, джаваскрипт, яваскрипт, нода, нодежс',
             view: 'main'
           }, {
             address: '/index.html',
             title: '',
-            description: '',
-            keywords: '',
+            description: 'Hosting Node Ваш хостинг, оперативная поддержка, помощь, низкие тарифы и доступные цены. Индивидуальный подход к клиентам',
+            keywords: 'hosting, node, linux, windows, хостинг, линукс, ноде, джаваскрипт, яваскрипт, нода, нодежс',
             view: 'main'
           }, {
             address: '/about.html',
-            title: 'Konnect A Hosting Category Flat Bootstarp Resposive Website Template | About :: w3layouts',
-            description: '',
+            title: 'Почему мы?',
+            description: 'Причины выбрать Hosting Node как Ваш хостинг, с оперативнрй поддержкой, помощью, низкими тарифами и доступными цены',
             keywords: 'Konnect Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design',
             view: 'about'
           }, {
             address: '/blog.html',
             view: 'blog',
-            title: '',
-            description: '',
-            keywords: ''
+            title: 'О нас',
+            keywords: 'hosting, node, linux, windows, хостинг, линукс, ноде, джаваскрипт, яваскрипт, нода, нодежс',
+            description: 'Рассказ о Hosting Node Ваш хостинг, оперативная поддержка, помощь, низкие тарифы и доступные цены. Индивидуальный подход к клиентам'
           }, {
-            title: '',
-            description: '',
-            keywords: '',
+            title: 'Связаться с нами',
+            description: 'Страница связи со специалистами лучшего хостинга в мире!',
+            keywords: 'hosting, node, linux, windows, хостинг, линукс, ноде, джаваскрипт, яваскрипт, нода, нодежс',
             view: 'support',
             address: '/support.html'
           }, {
-            address: '/domain.html',
-            view: 'domain',
-            title: '',
-            description: '',
-            keywords: ''
-          }, {
-            address: '/single.html',
-            view: 'single',
-            title: '',
-            description: '',
-            keywords: ''
-          }, {
             address: '/plans.html',
             view: 'plans',
-            title: '',
-            description: '',
-            keywords: ''
+            title: 'Наши тарифные планы',
+            description: 'Перечень наших тарифных планов и форма связи с нами',
+            keywords: 'hosting, node, linux, windows, хостинг, линукс, ноде, джаваскрипт, яваскрипт, нода, нодежс'
           }, {
             address: '/services(.html)?',
             view: 'services',
-            title: '',
-            description: '',
-            keywords: ''
+            title: 'Наши услуги',
+            description: 'Услуги, которые мы оказываем',
+            keywords: 'hosting, node, linux, windows, хостинг, линукс, ноде, джаваскрипт, яваскрипт, нода, нодежс'
           }, {
             address: '/refund.html',
             view: 'refund',
-            title: '',
-            description: '',
-            keywords: ''
+            title: 'Возврат средств',
+            description: 'Наша политика возврата средств покупателям',
+            keywords: 'hosting, node, linux, windows, хостинг, линукс, ноде, джаваскрипт, яваскрипт, нода, нодежс'
           }
         ];
         pageModel.Page.bulkCreate(pages).then(function() {
