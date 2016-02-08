@@ -52,3 +52,5 @@ crashlytics-build.properties
 .DS_Store
 *.wxproj
 *.wxtask
+node.sqlite
+test/node.sqlite
