@@ -47,15 +47,15 @@ var add_banner = function(req, res, params) {
     return params;
 };
 
-var real_banner_code = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>' +
-    '<!-- spice banner -->' +
-'<ins class="adsbygoogle" '+
-'style="display:block" '+
-'data-ad-client="ca-pub-5427833696408202" '+
-'data-ad-slot="7846702774" '+
-'data-ad-format="auto"></ins> '+
+var real_banner_code = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>'+
+    '<!— HostingNode —>'+
+'<ins class="adsbygoogle"'+
+'style="display:block"'+
+'data-ad-client="ca-pub-6784472794005470"'+
+'data-ad-slot="6920539346"'+
+'data-ad-format="auto"></ins>'+
 '    <script>'+
-'    (adsbygoogle = window.adsbygoogle || []).push({}); '+
+'    (adsbygoogle = window.adsbygoogle || []).push({});'+
 '</script>';
 
 var fake_banner_code = "<a href='http://podari-zhizn.ru/main/node/7427' target='_blank'> <img alt='Благотворительность вместо сувениров!' src='http://www.podari-zhizn.ru/sites/default/files/bvs14-200h600.gif' width='201' align='left' border='0'></a>";
